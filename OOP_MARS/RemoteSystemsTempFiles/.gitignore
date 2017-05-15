@@ -1,0 +1,28 @@
+.gradle
+.settings
+.classpath
+.project
+.metadata
+.recommenders
+build/
+target/
+
+
+*.log
+*.log.gz
+*.xml
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+/bin/
+/WEB-INF/
+/src/main/resources/static/js/lib/

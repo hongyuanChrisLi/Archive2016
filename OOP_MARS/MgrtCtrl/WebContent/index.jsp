@@ -1,0 +1,1 @@
+<% response.sendRedirect("http://localhost:8080/MgrtCtrl/login.jsp"); %>

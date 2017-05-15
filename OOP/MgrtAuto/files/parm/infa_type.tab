@@ -1,0 +1,12 @@
+1:source,none
+2:target,none
+5:transformation,expression
+6:transformation,stored_procedure
+7:transformation,sequence
+11:transformation,lookup_procedure
+21:mapping,none
+58:task,command
+59:task,email
+68:session,none
+70:worklet,none
+71:workflow,none

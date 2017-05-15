@@ -1,0 +1,86 @@
+<%@ page import="java.util.List" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="header.jsp" %>
+
+<% 
+	List<String> orignEnvs= (List<String>) session.getAttribute("orginEnvs");
+	request.setAttribute("orignEnvs", orignEnvs);
+	List<String> destEnvs = (List<String>) session.getAttribute("destEnvs");
+	request.setAttribute("destEnvs", destEnvs);
+%>
+
+
+	<DIV id=contentwrapper>
+		<ul>
+			<li><a class=active_item href="#">Home</a></li>
+			<li><a href="system.jsp">System</a></li>
+			<li><a href="monitor.jsp">Monitor</a></li>
+		</ul>
+
+		<DIV class=innertube>
+		
+			<p> Hello <%= session.getAttribute("username") %> </p>
+			<P> Informatica PowerCenter is a widely used extraction, transformation and loading (ETL) tool used in building enterprise data warehouses. 
+			</P>
+			
+			<!--END Disclaimer -->
+			<FORM id=ServiceRequest method=POST action="Submit.do">
+				<!--BEGIN Category -->
+				<table cellSpacing=0 cellPadding=0  border=0 style="vertical-align: center">
+					<tr>
+						<td><H4>From Env: </H4></td>
+						<td>
+							<SELECT name=ORIGN_ENV>
+								<c:forEach var="env" items="${orignEnvs}">
+									<OPTION value="${env}"> ${env} </OPTION>
+								</c:forEach>
+							</SELECT>
+						</td>
+					</tr>
+					<tr>
+						<td><H4>To Env: </H4></td>
+						<td>
+							<SELECT name=DEST_ENV>
+								<c:forEach var="env" items="${destEnvs}">
+									<OPTION value="${env}"> ${env} </OPTION>
+								</c:forEach>
+							</SELECT>
+						</td>
+					</tr>
+					<tr>
+						<td><H4>CRQ Number: </H4></td>
+						<td>
+							<input type="text" name=CRQ>
+						</td>
+					</tr>
+					<tr>
+						<td><H4>Comments: </H4></td>
+						<td>
+							<input type="text" name=COMMENT>
+						</td>
+					</tr>
+					<tr>
+						<td><H4>Is Group? : </H4></td>
+						<td>
+							<SELECT name=IS_GROUP>
+								<OPTION selected 
+									value="N" > No
+								</OPTION>
+								<OPTION 
+									value="Y" > Yes
+								</OPTION>
+							</SELECT>
+						</td>
+					</tr>
+				</table>
+				<H4>Migration List:</H4>
+					<TEXTAREA rows=10 cols=68 name=DETAILS style="vertical-align: top"></TEXTAREA> 
+					<br>
+					<INPUT type=reset value=Clear class=clear> 
+					<INPUT type=submit value=Submit class=submit> 
+					<br>
+			</FORM>
+			<!--BEGIN FootValidator -->
+		</DIV>
+	</DIV>
+<%@ include file="footer.jsp" %>

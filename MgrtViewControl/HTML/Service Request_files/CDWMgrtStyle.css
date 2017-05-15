@@ -1,0 +1,72 @@
+BODY {
+	BACKGROUND-IMAGE: url(images/pge_bg.jpg); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.5em; PADDING-RIGHT: 0px
+}
+.headerbar {
+	MARGIN-BOTTOM: 10px; BACKGROUND: url(images/gray_bar.bmp) black repeat-x left center; COLOR: blue; PADDING-BOTTOM: 10px; PADDING-TOP: 20px; FONT: bold 0px Arial; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WIDTH: 100%
+}
+#maincontainer {
+	MARGIN: 0px auto; WIDTH: 600px
+}
+#topsection {
+	HEIGHT: 90px
+}
+#topsection H1 {
+	PADDING-TOP: 15px; MARGIN: 0px
+}
+#contentwrapper {
+	BACKGROUND: white; FLOAT: left; WIDTH: 100%
+}
+#loginwrapper {
+	BACKGROUND: white; WIDTH: 50%; MARGIN: 0 auto
+}
+
+.innertube {
+	MARGIN: 0px 10px 10px
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+H4 {
+	font-size: 12pt;
+	line-height: 0px;
+	padding: 15px 5px 0 10px;
+}
+
+UL {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 5px ;
+    overflow: hidden;
+		background-color: #f1f1f1;
+}
+li {
+    float: left;
+}
+li a {
+    display: inline-block;
+		border-radius: 15px;
+    color: black;
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+}
+.active_item {
+    background-color: #3399ff;
+}
+input.submit {
+	width:75px;
+	height:30px;
+	float: right;
+}
+input.clear {
+	width:75px;
+	height:30px;
+	float: left;
+}
+

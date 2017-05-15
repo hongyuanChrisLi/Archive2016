@@ -1,0 +1,22 @@
+[Swing Type Tester] displayCanvas.setCharacterSource(producer)
+-->
+[CharacterListener/CharacterDisplayCanvas] cs.addCharacterListener(this);
+<--
+[CharacterSource/RandomCharacterGenerator] handler.addCharacterListener(cl);
+--> 
+[CharacterEventHandler] listeners 
+
+<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[Swing Type Tester] producer.start()
+-->
+[Thread/RandomCharacterGenerator] run.nextCharacter()
+-->
+[Thread/RandomCharacterGenerator] handler.fireNewCharacter(this,num);
+-->
+[CharacterEventHandler] CharacterEvent ce = new CharacterEvent(source, c);
+												newCharacter(ce);
+-->
+| [CharacterEvent] public character c;
+---> 
+[JComponent/CharacterDisplayCanvas] repaint();

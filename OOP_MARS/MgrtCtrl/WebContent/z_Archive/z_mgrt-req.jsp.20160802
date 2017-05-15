@@ -1,0 +1,91 @@
+<%@ include file="header.jsp" %>
+
+			<DIV id=contentwrapper>
+				<ul>
+					<li><a class=active_item href="#">Home</a></li>
+					<li><a href="system.jsp">System</a></li>
+					<li><a href="monitor.jsp">Monitor</a></li>
+				</ul>
+
+				<DIV class=innertube>
+				
+					<p> Hello <%= session.getAttribute("username") %> </p>
+					<P> Informatica PowerCenter is a widely used extraction, transformation and loading (ETL) tool used in building enterprise data warehouses. 
+					</P>
+					
+					<!--END Disclaimer -->
+					<FORM id=ServiceRequest method=POST action="Submit.do">
+						<!--BEGIN Category -->
+						<table cellSpacing=0 cellPadding=0  border=0 style="vertical-align: center">
+							<tr>
+								<td><H4>From Environment: </H4></td>
+								<td>
+									<SELECT name=SRC_ENV>
+										<OPTION selected 
+											value="ZCD" > ZCD
+										</OPTION>
+										<OPTION 
+											value="ZC" > ZC
+										</OPTION>
+										<OPTION 
+											value="REGT" > REGT
+										</OPTION>
+									</SELECT>
+								</td>
+							</tr>
+							<tr>
+								<td><H4>To Environment: </H4></td>
+								<td>
+									<SELECT name=TGT_ENV>
+										<OPTION 
+											value="ZCD" > ZCD
+										</OPTION>
+										<OPTION selected 
+											value="ZC" > ZC
+										</OPTION>
+										<OPTION 
+											value="FSTE" > FSTE
+										</OPTION>
+										<OPTION 
+											value="REGT" > REGT
+										</OPTION>
+									</SELECT>
+								</td>
+							</tr>
+							<tr>
+								<td><H4>CRQ Number: </H4></td>
+								<td>
+									<input type="text" name=CRQ>
+								</td>
+							</tr>
+							<tr>
+								<td><H4>Comments: </H4></td>
+								<td>
+									<input type="text" name=COMMENT>
+								</td>
+							</tr>
+							<tr>
+								<td><H4>Is Group? : </H4></td>
+								<td>
+									<SELECT name=IS_GROUP>
+										<OPTION selected 
+											value="N" > No
+										</OPTION>
+										<OPTION 
+											value="Y" > Yes
+										</OPTION>
+									</SELECT>
+								</td>
+							</tr>
+						</table>
+						<H4>Migration List:</H4>
+							<TEXTAREA rows=10 cols=68 name=DETAILS style="vertical-align: top"></TEXTAREA> 
+							<br>
+							<INPUT type=reset value=Clear class=clear> 
+							<INPUT type=submit value=Submit class=submit> 
+							<br>
+					</FORM>
+					<!--BEGIN FootValidator -->
+				</DIV>
+			</DIV>
+<%@ include file="footer.jsp" %>

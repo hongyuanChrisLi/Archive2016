@@ -1,0 +1,11 @@
+<< date >>
+[Pending] HTML Request page with JSP
+[Pending] Java class handling the request and send back results. 
+
+
+<< date >>
+[Pending] HTML Config page, saving username passwords
+[Pending] server handling crendetial information
+
+<< date >>
+[Pening] HTML real-time display window about migration progress. 
